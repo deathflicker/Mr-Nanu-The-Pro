@@ -1,0 +1,105 @@
+<html>
+<head>
+  <title>
+    Mr. Nanu - The Pro
+  </title>
+  <style>
+    body{
+      background-color: black;
+    }
+    .arpantest{
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    .popup{
+      width: 800px;
+      height: 800px;
+      background-color: white;
+      position: top;
+      border-radius: 18px;
+    }
+    .duduTest{
+      width: 100%;
+      height: 80%;
+    }
+  </style>
+</head>
+<body scroll="no" style="overflow: hidden">
+  <meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=0.4, maximum-scale=0.4, user-scalable=0' 
+/>
+  <!--background blur division-->
+  <div class="arpantest" id="div1">
+    <div class="popup" id="div2">
+      <p align="center" id="partypopperIMG" style="display: none;"><br><br><br><img src="giphy.gif" width="600px" height="600px"></p>
+      <p align="center" style="font-size: 160pt; display: block;"><label id="timerLabel">10</label>
+      <p align="center" id="timerlabel2" style="font-size: 50pt; display: block;"><a style="color: red;">L</a><a style="color: blue;">e</a><a style="color: green;">t's </a><a style="color: brown;">Cou</a><a style="color: #FF9803;">n</a><a style="color: black;">t</p>
+    </div>
+  </div>
+  <div class="duduTest">
+    <!--main dudu image-->
+  <p align="center"><img src="https://media1.giphy.com/media/qFNcv6c05EPO8/source.gif" width="900px" height="700px"></p>
+  <!--chokbaj label-->
+  <p align="center"><label style="color: white; font-size: 150pt; display: block; opacity: 0" id="chokbajLabel">Chokbaj</label></p>
+  </div>
+  <script>
+    function secondPage(){
+      window.location.href='marquee.html';
+    }
+  </script>
+  <script>
+    var timerlabel2SHOWN = document.getElementById('timerlabel2');
+    var partypopperSHOWN = document.getElementById('partypopperIMG');
+    var timerlabelSHOWN = document.getElementById('timerLabel');
+    var runningTimerStorage = document.getElementById('timerLabel').innerHTML;
+    function runningTimer(){
+      if (runningTimerStorage > 1) {
+        runningTimerStorage = runningTimerStorage - 1;
+        document.getElementById('timerLabel').innerHTML = runningTimerStorage;
+        setTimeout(runningTimer, 1000);
+      }
+      else{
+        timerlabelSHOWN.style.display = 'none';
+        timerlabel2SHOWN.style.display = 'none';
+        partypopperSHOWN.style.display = 'block';
+        setTimeout(secondPage, 2500)
+      }
+    }
+  </script>
+  <script>
+    function popuptimer(){
+      var divisionStorage = document.getElementById('div1');
+      divisionStorage.style.display = 'flex';
+      setTimeout(runningTimer,1200)
+    }
+  </script>
+  <script>
+    var chokbajtimercounter = 0;
+    function chokbajtimer(){
+      if (chokbajtimercounter<1) {
+        chokbajtimercounter = chokbajtimercounter + 0.03;
+      var chokbajStorage = document.getElementById('chokbajLabel');
+      chokbajStorage.style.opacity = chokbajtimercounter;
+      setTimeout(chokbajtimer,100)
+      }
+      else{
+        popuptimer();
+      }
+    }
+  </script>
+  <script>
+    chokbajtimer();
+  </script>
+  <br><br><label style="color: white;">Arpan Bhattacharya<a style="color: red;"> © 2020</label>
+</body>
+</html>
