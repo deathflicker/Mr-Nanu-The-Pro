@@ -1,6 +1,6 @@
 // All variables
-var eyeOpenDress='RUPAGENJInanuHeadNormal.png';
-var eyeCloseDress='RUPAGENJInanuHeadEyeClosed.png';
+var eyeOpenDress='RUPAGENJInanuHeadNormal.gif'
+var eyeCloseDress='RUPAGENJInanuHeadEyeClosed.gif';
 var storeUserAgent = navigator.userAgent;
 var nanuHeadNormal = document.getElementById('nanuHeadNormal');
 var nanuTailNormal = document.getElementById('nanuTailNormal');
@@ -58,23 +58,23 @@ function chooseShirts(shirtChosen){
 	clearInterval(eyesClosedTimer);
 	var storageShirtChosen = shirtChosen.options[shirtChosen.selectedIndex].text;
 	if (storageShirtChosen=='-Shirts-' || storageShirtChosen=='Rupa Genji') {
-		eyeOpenDress='RUPAGENJInanuHeadNormal.png';
-		eyeCloseDress='RUPAGENJInanuHeadEyeClosed.png';
+		eyeOpenDress='RUPAGENJInanuHeadNormal.gif';
+		eyeCloseDress='RUPAGENJInanuHeadEyeClosed.gif';
 		eyesOpen();
 	}
 	else if(storageShirtChosen=='Strap Bra'){
-		eyeOpenDress='STRAPBRAnanuHeadNormal.png';
-		eyeCloseDress='STRAPBRAnanuHeadEyeClosed.png';
+		eyeOpenDress='STRAPBRAnanuHeadNormal.gif';
+		eyeCloseDress='STRAPBRAnanuHeadEyeClosed.gif';
 		eyesOpen();
 	}
 	else if(storageShirtChosen=='T Shirt'){
-		eyeOpenDress='TSHIRTnanuHeadNormal.png';
-		eyeCloseDress='TSHIRTnanuHeadEyeClosed.png';
+		eyeOpenDress='TSHIRTnanuHeadNormal.gif';
+		eyeCloseDress='TSHIRTnanuHeadEyeClosed.gif';
 		eyesOpen();
 	}
 	else if(storageShirtChosen=='Sports Bra'){
-		eyeOpenDress='SPORTSBRAnanuHeadNormal.png';
-		eyeCloseDress='SPORTSBRAnanuHeadEyeClosed.png';
+		eyeOpenDress='SPORTSBRAnanuHeadNormal.gif';
+		eyeCloseDress='SPORTSBRAnanuHeadEyeClosed.gif';
 		eyesOpen();
 	}
 	else{
@@ -87,16 +87,16 @@ function chooseShirts(shirtChosen){
 function choosePants(pantChosen){
 	var storagePantChosen = pantChosen.options[pantChosen.selectedIndex].text;
 	if (storagePantChosen=='-Pants-' || storagePantChosen=='Jangiya (Cockcon)') {
-		nanuTailNormal.src='PANTjangiya.png';
+		nanuTailNormal.src='PANTjangiya.gif';
 	}
 	else if(storagePantChosen=='Joggers'){
-		nanuTailNormal.src='PANTjoggers.png';
+		nanuTailNormal.src='PANTjoggers.gif';
 	}
 	else if (storagePantChosen=='Lungi') {
-		nanuTailNormal.src='PANTlungi.png';
+		nanuTailNormal.src='PANTlungi.gif';
 	}
 	else if(storagePantChosen=='Panty'){
-		nanuTailNormal.src='PANTpanty.png';
+		nanuTailNormal.src='PANTpanty.gif';
 	}
 }
 
