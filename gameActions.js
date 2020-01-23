@@ -108,7 +108,7 @@ function chooseGlasses(glassesChosen){
 	glasses.style.display='none';			
 	}
 	else if(storageGlassesChosen=='Boobs Frame'){
-		glasses.src='BOOBSglasses.png';
+		glasses.src='BOOBSglasses.gif';
 		glasses.style.display='block';
 	}
 	else{
