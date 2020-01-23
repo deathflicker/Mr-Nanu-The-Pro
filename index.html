@@ -4,49 +4,104 @@
 	<title>
 		Talking Nanu
 	</title>
+<!--adding CSS file-->
 <link rel="stylesheet" type="text/css" href="gameStyle.css">
 </head>
+<!--Preventing Scroll-->
 <body scroll="no" style="overflow: hidden">
+<!--Preventing User Zoom-->
 	<meta 
      name='viewport' 
      content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
 />
+<!--Here lies the Header-->
 	<div class="header">
 		<a class="talkingNanuTxt">Talking Nanu</a>
 	</div>
+<!--Here starts the options menu-->
 	<div class="optional">
 		<p><label class="inGameLabel">In Game-</label></p>
-		<select class="dressContainer">
-			<option id="dressMenu" class="dress">
-				-Dress-
+<!--Shirt Selector-->
+		<select class="shirtsContainer" id="shirt" onchange="chooseShirts(this)">
+			<option id="shirtsMenu" class="dress">
+				-Shirts-
+			</option>
+			<option>
+				Strap Bra
+			</option>
+			<option>
+				Sports Bra
+			</option>
+			<option>
+				Rupa Genji
+			</option>
+			<option>
+				T Shirt
 			</option>
 		</select>
-		<p><select class="glassContainer">
+<!--Pants Selector-->
+		<p><select class="pantsContainer" id="pant" onchange="choosePants(this)">
+			<option>
+				-Pants-
+			</option>
+			<option>
+				Lungi
+			</option>
+			<option>
+				Jangiya (Cockcon)
+			</option>
+			<option>
+				Panty
+			</option>
+			<option>
+				Joggers
+			</option>
+		</select></p>
+<!--Spectacles Selector-->
+		<p><select class="glassContainer" onchange="chooseGlasses(this)">
 			<option id="glassMenu" class="glass">
 				-Glass-
 			</option>
 			<option>
-				Rectangular Frame
+				Boobs Frame
+			</option>
+			<option>
+				Dildo Frame
+			</option>
+			<option>
+				Pussy Frame
+			</option>
+			<option>
+				None
 			</option>
 		</select></p>
-		<p><select class="genderContainer">
-			<option id="genderMenu" class="gender">
-				-Gender-
-			</option>
-		</select></p>
+<!--Nanu Singing on Button Press-->
 		<p><button class="singButton" id="singBtn">Sing</button></p>
+<!--Spank Nanu's ass on button press-->
 		<p><button class="spankButton" id="spankBtn">Spank</button></p>
-		<p><button class="nudeButton" id="nudeBtn">Nude</button></p>
+<!--Make Nanu Nude on button press-->
+		<p><button class="nudeButton" id="nudeBtn" onclick="">Nude</button></p>
+<!--End of the options menu-->
 		<p class="divisionEnds"></p>
+<!--Go to gallery button lies below-->
 		<p><img src="gallery.png" class="galleryPageButton" id="galleryPageBtn"></img></p>
 	</div>
+<!--Main Canvas where NANU lies-->
 	<div class="main">
-		<img src="NANU.png" class="headOfNanu">
+<!--Nanu Upper Body-->
+		<img src="RUPAGENJInanuHeadNormal.png" class="headOfNanu" id="nanuHeadNormal">
+<!--Spectacles viewer-->
+		<img src="BOOBSglasses.png" class="glassesContainer" id="glassesView">
+<!--Nanu Lower Body-->
+		<img src="PANTjangiya.png" class="tailOfNanu" id="nanuTailNormal" onclick="">
 	</div>
+<!--Chat with Nanu Message-box lies here-->
 	<div class="footer">
 		<p><input type="text" class="messageBox" placeholder="Enter Message">
 		<button class="sendButton" onclick="">Chat</button>&nbsp&nbsp
 		<a class="imagesText">Share</a></p>
 	</div>
+<!--Adding JavaScript file-->
+<script src="gameActions.js"></script>
 </body>
 </html>
