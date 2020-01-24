@@ -5,12 +5,17 @@ var storeUserAgent = navigator.userAgent;
 var nanuHeadNormal = document.getElementById('nanuHeadNormal');
 var nanuTailNormal = document.getElementById('nanuTailNormal');
 var glasses = document.getElementById('glassesView');
+var topMenu = document.getElementById('headerMenu');
+var leftMenu = document.getElementById('leftSideMenu');
+var bottomMenu = document.getElementById('footerMenu');
+var showMenuBtn = document.getElementById('showMenuBtn');
+var copyLinkNotification = document.getElementById('notificationShw');
 var eyesClosedTimer;
 var eyesOpenTimer;
 
 //to check mobile or desktop
 if(storeUserAgent.includes('Windows')){
-	alert('Windows Machine');
+	console.log('Windows');
 }
 
 //Blinking
@@ -111,8 +116,56 @@ function chooseGlasses(glassesChosen){
 		glasses.src='BOOBSglasses.gif';
 		glasses.style.display='block';
 	}
+	else if(storageGlassesChosen=='Dildo Frame'){
+		glasses.src='DILDOglasses.gif';
+		glasses.style.display='block';
+	}
+	else if(storageGlassesChosen=='Pussy Frame'){
+		glasses.src='PUSSYglasses.gif';
+		glasses.style.display='block';
+	}
 	else{
 		glasses.style.display='none';
 	}
 
+}
+
+//Make Nanu Nude
+function nudeButton(){
+	clearInterval(eyesOpenTimer);
+	clearInterval(eyesClosedTimer);
+	nanuTailNormal.src='NANUlowerNude.gif';
+	eyeOpenDress='NANUupperNudeNormal.gif';
+	eyeCloseDress='NANUupperNudeEyeClosed.gif';
+	eyesOpen();
+}
+
+
+//show Menu bar
+
+function hideMenu(){
+topMenu.style.display='none';
+leftMenu.style.display='none';
+bottomMenu.style.display='none';
+showMenuBtn.style.display='block';	
+}
+
+//Hide Menu bar
+
+function showMenu(){
+	showMenuBtn.style.display='none';
+	topMenu.style.display='block';
+	leftMenu.style.display='block';
+	bottomMenu.style.display='block';
+}
+
+//copy link notification
+function copyLinkNotifierOff(){
+	copyLinkNotification.style.display='none';
+}
+
+function copyLink(){
+	console.log('hi');
+	copyLinkNotification.style.display='flex';
+	setTimeout(copyLinkNotifierOff,2000);
 }

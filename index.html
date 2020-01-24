@@ -14,12 +14,16 @@
      name='viewport' 
      content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
 />
+<script>
+//Warning about nudity
+//alert("<< Welcome to Talking Nanu >> \n \n It is a WebApp to interact virtually with Mr. Nanu. It's developer, Arpan Bhattacharya guarantees to deliver an unforgettable experience for you. \n \n \n \n [Note: The page may contain nudity. Feel free to leave now.]");
+</script>
 <!--Here lies the Header-->
-	<div class="header">
+	<div class="header" id="headerMenu">
 		<a class="talkingNanuTxt">Talking Nanu</a>
 	</div>
 <!--Here starts the options menu-->
-	<div class="optional">
+	<div class="optional" id="leftSideMenu">
 		<p><label class="inGameLabel">In Game-</label></p>
 <!--Shirt Selector-->
 		<select class="shirtsContainer" id="shirt" onchange="chooseShirts(this)">
@@ -77,12 +81,12 @@
 		</select></p>
 <!--Nanu Singing on Button Press-->
 		<p><button class="singButton" id="singBtn">Sing</button></p>
-<!--Spank Nanu's ass on button press-->
-		<p><button class="spankButton" id="spankBtn">Spank</button></p>
 <!--Make Nanu Nude on button press-->
-		<p><button class="nudeButton" id="nudeBtn" onclick="">Nude</button></p>
+		<p><button class="nudeButton" id="nudeBtn" onclick="nudeButton()">Nude</button></p>
 <!--End of the options menu-->
 		<p class="divisionEnds"></p>
+<!--Click this button to share this webapp-->
+		<p><button class="shareButton" id="shareBtn" onclick="copyLink()">Share Me</button></p>
 <!--Go to gallery button lies below-->
 		<p><img src="gallery.png" class="galleryPageButton" id="galleryPageBtn"></img></p>
 	</div>
@@ -90,16 +94,21 @@
 	<div class="main">
 <!--Nanu Upper Body-->
 		<img src="RUPAGENJInanuHeadNormal.gif" class="headOfNanu" id="nanuHeadNormal">
+<!--Copied to clipboard notification-->		
+		<a class="notificationShow" id="notificationShw">Sharable Link Copied !</a>
 <!--Spectacles viewer-->
 		<img src="BOOBSglasses.gif" class="glassesContainer" id="glassesView">
 <!--Nanu Lower Body-->
 		<img src="PANTjangiya.gif" class="tailOfNanu" id="nanuTailNormal" onclick="">
+<!--Click this button to show menu bar-->
+		<button class="showMenuButton" id="showMenuBtn" onclick="showMenu()">Show Menu</button>
 	</div>
 <!--Chat with Nanu Message-box lies here-->
-	<div class="footer">
+	<div class="footer" id="footerMenu">
 		<p><input type="text" class="messageBox" placeholder="Enter Message">
 		<button class="sendButton" onclick="">Chat</button>&nbsp&nbsp
-		<a class="imagesText">Share</a></p>
+<!--Click this button to hide menu bar-->
+		<a class="hideMenuButton" id="hideMenuBtn" onclick="hideMenu()">Full Screen</a></p>
 	</div>
 <!--Adding JavaScript file-->
 <script src="gameActions.js"></script>
