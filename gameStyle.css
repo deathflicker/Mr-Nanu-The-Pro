@@ -43,7 +43,8 @@ body{
 	width: 90%;
 }
 .singButton{
-	background-color: rgb(255,200,0);
+	color: white;
+	background-color: rgb(100,100,0);
 	padding-top: 5%;
 	padding-bottom: 5%;
 	width: 90%;
@@ -65,9 +66,17 @@ body{
 	background-color: black;
 	padding-top: 1.5%;
 }
+.lastEnd{
+	background-color: rgba(255,0,255,0.1);
+}
 .galleryPageButton{
 	width: 80%;
 	height: 5%;
+}
+.galleryLabel{
+	position: inherit;
+	font-size: 80%;
+	color: rgba(255,255,255,0.6);
 }
 .main{
 	background-color: rgb(0,120,120);
@@ -87,12 +96,35 @@ body{
 	width: 75%;
 	height: 70%;
 }
+.nanuTalk{
+	display: none;
+	z-index: 3;
+	position: fixed;
+	width: 80%;
+	height: 79%;
+	top: 7.2%;
+	left: 18%;
+}
 .headOfNanu{
 	left: 18%;
 	position: inherit;
 	top: 7%;
 	width: 80%;
 	height: 79%;
+}
+.chatAreaShow{
+	border-radius: 25%;
+	color: white;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	z-index: 4;
+	right: 15%;
+	width: 50%;
+	height: 20%;
+	background-color: rgba(0,0,0,0.9);
+	position: fixed;
+	top: 50%;
 }
 .notificationShow{
 	align-items: center;
@@ -114,16 +146,28 @@ body{
 	left: 17.5%;
 }
 .showMenuButton{
+	border-radius: 8%;
 	display: none;
 	padding-bottom: 1%;
 	padding-right: 1%;
 	padding-top: 1%;
 	padding-left: 1%;
-	right: 1%;
-	bottom: 1%;
+	right: 4%;
+	bottom: 2%;
 	position: fixed;
 	background-color: black;
 	color: white;
+}
+.copyLinkTextBox{
+	display: none;
+	height: 0.01%;
+	width: 0.01%;
+	color: rgba(0,120,120,0);
+	left: 0%;
+	position: fixed;
+	bottom: 0%;
+	border-color: rgba(0,120,120,0);
+	background-color: rgba(0,120,120,0);
 }
 .footer{
 	display: block;
@@ -159,7 +203,7 @@ body{
 }
 .hideMenuButton{
 	width: 15%;
-	right: 0.5%;
+	right: 3%;
 	bottom: 0.5%;
 	position: fixed;
 	display: block;

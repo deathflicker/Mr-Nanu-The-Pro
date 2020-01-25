@@ -5,11 +5,15 @@ var storeUserAgent = navigator.userAgent;
 var nanuHeadNormal = document.getElementById('nanuHeadNormal');
 var nanuTailNormal = document.getElementById('nanuTailNormal');
 var glasses = document.getElementById('glassesView');
-var topMenu = document.getElementById('headerMenu');
 var leftMenu = document.getElementById('leftSideMenu');
 var bottomMenu = document.getElementById('footerMenu');
 var showMenuBtn = document.getElementById('showMenuBtn');
 var copyLinkNotification = document.getElementById('notificationShw');
+var copyLinkShow = document.getElementById('copyLinkTxtBox');
+var nanuTalk = document.getElementById('nanuTlk');
+var textMessageBox = document.getElementById('textMessageBox');
+var chatAreaShow = document.getElementById('chatAshow');
+var whatToAnswer;
 var eyesClosedTimer;
 var eyesOpenTimer;
 
@@ -72,7 +76,7 @@ function chooseShirts(shirtChosen){
 		eyeCloseDress='STRAPBRAnanuHeadEyeClosed.gif';
 		eyesOpen();
 	}
-	else if(storageShirtChosen=='T Shirt'){
+	else if(storageShirtChosen=='Playboy Tshirt'){
 		eyeOpenDress='TSHIRTnanuHeadNormal.gif';
 		eyeCloseDress='TSHIRTnanuHeadEyeClosed.gif';
 		eyesOpen();
@@ -80,6 +84,21 @@ function chooseShirts(shirtChosen){
 	else if(storageShirtChosen=='Sports Bra'){
 		eyeOpenDress='SPORTSBRAnanuHeadNormal.gif';
 		eyeCloseDress='SPORTSBRAnanuHeadEyeClosed.gif';
+		eyesOpen();
+	}
+	else if(storageShirtChosen=='Adidas Tshirt'){
+		eyeOpenDress='ADIDASnanuHeadNormal.gif';
+		eyeCloseDress='ADIDASnanuHeadEyeClosed.gif';
+		eyesOpen();
+	}
+	else if(storageShirtChosen=='Puma Tshirt'){
+		eyeOpenDress='PUMAnanuHeadNormal.gif';
+		eyeCloseDress='PUMAnanuHeadEyeClosed.gif';
+		eyesOpen();
+	}
+	else if(storageShirtChosen=='Mermaid Bra'){
+		eyeOpenDress='MERMAIDBRAnanuHeadNormal.gif';
+		eyeCloseDress='MERMAIDBRAnanuHeadEyeClosed.gif';
 		eyesOpen();
 	}
 	else{
@@ -103,6 +122,15 @@ function choosePants(pantChosen){
 	else if(storagePantChosen=='Panty'){
 		nanuTailNormal.src='PANTpanty.gif';
 	}
+	else if(storagePantChosen=='Radio'){
+		nanuTailNormal.src='PANTradio.gif';
+	}
+	else if(storagePantChosen=='Nikal Lavde (Nike)'){
+		nanuTailNormal.src='PANTnike.gif';
+	}
+	else if(storagePantChosen=='Skirt'){
+		nanuTailNormal.src='PANTskirt.gif';
+	}
 }
 
 
@@ -122,6 +150,22 @@ function chooseGlasses(glassesChosen){
 	}
 	else if(storageGlassesChosen=='Pussy Frame'){
 		glasses.src='PUSSYglasses.gif';
+		glasses.style.display='block';
+	}
+	else if(storageGlassesChosen=='Birthday Special'){
+		glasses.src='BIRTHDAYglasses.gif';
+		glasses.style.display='block';
+	}
+	else if(storageGlassesChosen=='Nongrami Frame'){
+		glasses.src='ANUBRATAglasses.gif';
+		glasses.style.display='block';
+	}
+	else if(storageGlassesChosen=='Johnny Frame'){
+		glasses.src='JOHNNYglasses.gif';
+		glasses.style.display='block';
+	}
+	else if(storageGlassesChosen=='Lady Frame'){
+		glasses.src='CATglasses.gif';
 		glasses.style.display='block';
 	}
 	else{
@@ -144,7 +188,6 @@ function nudeButton(){
 //show Menu bar
 
 function hideMenu(){
-topMenu.style.display='none';
 leftMenu.style.display='none';
 bottomMenu.style.display='none';
 showMenuBtn.style.display='block';	
@@ -154,7 +197,6 @@ showMenuBtn.style.display='block';
 
 function showMenu(){
 	showMenuBtn.style.display='none';
-	topMenu.style.display='block';
 	leftMenu.style.display='block';
 	bottomMenu.style.display='block';
 }
@@ -162,10 +204,15 @@ function showMenu(){
 //copy link notification
 function copyLinkNotifierOff(){
 	copyLinkNotification.style.display='none';
+	copyLinkShow.style.display='none';
 }
 
 function copyLink(){
-	console.log('hi');
+	copyLinkShow.style.display='block';
+	copyLinkShow.select();
+	document.execCommand('copy');
 	copyLinkNotification.style.display='flex';
 	setTimeout(copyLinkNotifierOff,2000);
 }
+
+//test Song
