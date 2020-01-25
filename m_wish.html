@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mr Nanu-The Pro</title>
+  <style type="text/css">
+    body{
+      z-index: 1;
+      background-color: black;
+    }
+    .main{
+      display: flex;
+      z-index: 2;
+      position: fixed;
+      background-color: black;
+      width: 200%;
+      height: 200%;
+      left: 0%;
+      top: 0%;
+    }.mainImage{
+      left: 0%;
+      position: fixed;
+      width: 100%;
+      height: 80%;
+    }
+    .chokbajText{
+      opacity: 0;
+      position: fixed;
+      font-size: 200pt;
+      top: 80%;
+      left: 4%;
+      color: rgba(255,255,255,1);
+    }
+    .backgroundBlur{
+      align-content: center;
+      justify-content: center;
+      z-index: 3;
+      display: none;
+      left: 0%;
+      top: 0%;
+      position: fixed;
+      background-color: rgba(0,0,0,0.95);
+      height: 100%;
+      width: 100%;
+    }
+    .popUpMenu{
+      text-align: center;
+      border-radius: 16%;
+      position: fixed;
+      background-color: darkred;
+      top: 40%;
+      width: 50%;
+      height: 25%;
+    }
+    .countText{
+      color: yellow;
+      text-align: center;
+      font-size: 60pt;
+      width: 50%;
+      height: 2%;
+      left: 25%;
+      top: 50%;
+      position: fixed;
+    }
+    .lastDiv{
+      display: block;
+      border-radius: 8%;
+      font-size: 60%;
+      color: white;
+      left: 40%;
+      height: 3.5%;
+      width: 20%;
+      position: inherit;
+      top: 61.5%;
+      background-color: rgba(0,0,255,0.5);
+    }
+  </style>
+</head>
+<body>
+<!-- Background-->
+  <div class="main">
+    <img src="HBD.gif" class="mainImage">
+    <a class="chokbajText" id="mainText">Chokbaj</a>
+  </div>
+<!--PopUp-->
+  <div class="backgroundBlur" id="bkBlur">
+    <div class="popUpMenu" id="popUp"><a class="countText">Talking Nanu</div>
+    <div class="lastDiv" id="loadingText">loading...</div>
+  </div>
+
+
+<script>
+//Go to next page
+var counterTwo=0;
+function loading(){
+  if(counterTwo<101){
+    document.getElementById('loadingText').innerHTML = counterTwo+'%';
+    nextPage();
+    counterTwo=counterTwo+1;
+  }
+  else{
+    clearInterval(nextPageTimer);
+    window.location.href='m_talking_Nanu.html';
+  }
+}
+
+function nextPage(){
+ nextPageTimer = setTimeout(loading,40);
+}
+
+//Chokbaj Text Show Script
+var mainText = document.getElementById('mainText');
+var bkBlur = document.getElementById('bkBlur');
+var counter=0;
+function chokbajTimer(){
+counter=counter+0.1;
+if (counter<1.1) {
+  mainText.style.opacity=counter;
+  startTimer();
+}
+else{
+  clearInterval(textTimer);
+  bkBlur.style.display='flex';
+  setTimeout(loading,Math.floor(Math.random()*2001));
+}
+}
+
+function startTimer(){
+  textTimer = setTimeout(chokbajTimer,400);
+}
+
+chokbajTimer();
+</script>
+
+</body>
+</html>

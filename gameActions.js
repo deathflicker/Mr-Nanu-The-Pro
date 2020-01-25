@@ -174,6 +174,18 @@ function chooseGlasses(glassesChosen){
 
 }
 
+//Reset Everything
+function resetButton(){
+	clearInterval(eyesOpenTimer);
+	clearInterval(eyesClosedTimer);
+	eyeOpenDress='RUPAGENJInanuHeadNormal.gif';
+	eyeCloseDress='RUPAGENJInanuHeadEyeClosed.gif';
+	nanuTailNormal.src='PANTjangiya.gif';
+	glasses.style.display='none';
+	eyesOpen();
+
+}
+
 //Make Nanu Nude
 function nudeButton(){
 	clearInterval(eyesOpenTimer);
@@ -215,4 +227,13 @@ function copyLink(){
 	setTimeout(copyLinkNotifierOff,2000);
 }
 
-//test Song
+//Go to Help Page
+function helpFunction(){
+	window.location.href='m_help_page.html';
+}
+
+
+//Go to gallery Page
+function galleryView(){
+	window.location.href='m_gallery_view.html';
+}

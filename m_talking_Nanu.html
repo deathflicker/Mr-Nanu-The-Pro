@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Talking Nanu
+	</title>
+<!--adding CSS file-->
+<link rel="stylesheet" type="text/css" href="gameStyle.css">
+</head>
+<!--Preventing Scroll-->
+<body scroll="no" style="overflow: hidden">
+<!--Preventing User Zoom-->
+	<meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+/>
+<script>
+//Warning about nudity
+//alert("<< Welcome to Talking Nanu >> \n \n It is a WebApp to interact virtually with Mr. Nanu. It's developer, Arpan Bhattacharya guarantees to deliver an unforgettable experience for you. \n \n \n \n [Note: The page may contain nudity. Feel free to leave now.]");
+</script>
+<!--Here lies the Header-->
+	<div class="header" id="headerMenu">
+		<a class="talkingNanuTxt">Talking Nanu</a>
+	</div>
+<!--Here starts the options menu-->
+	<div class="optional" id="leftSideMenu">
+		<p><label class="inGameLabel">In Game-</label></p>
+<!--Shirt Selector-->
+		<select class="shirtsContainer" id="shirt" onchange="chooseShirts(this)">
+			<option id="shirtsMenu" class="dress">
+				-Shirts-
+			</option>
+			<option>
+				Strap Bra
+			</option>
+			<option>
+				Mermaid Bra
+			</option>
+			<option>
+				Sports Bra
+			</option>
+			<option>
+				Rupa Genji
+			</option>
+			<option>
+				Adidas Tshirt
+			</option>
+			<option>
+				Puma Tshirt
+			</option>
+			<option>
+				Playboy Tshirt
+			</option>
+		</select>
+<!--Pants Selector-->
+		<p><select class="pantsContainer" id="pant" onchange="choosePants(this)">
+			<option>
+				-Pants-
+			</option>
+			<option>
+				Lungi
+			</option>
+			<option>
+				Radio
+			</option>
+			<option>
+				Jangiya (Cockcon)
+			</option>
+			<option>
+				Nikal Lavde (Nike)
+			</option>
+			<option>
+				Skirt
+			</option>
+			<option>
+				Panty
+			</option>
+			<option>
+				Joggers
+			</option>
+		</select></p>
+<!--Spectacles Selector-->
+		<p><select class="glassContainer" onchange="chooseGlasses(this)">
+			<option id="glassMenu" class="glass">
+				-Glass-
+			</option>
+			<option>
+				Birthday Special
+			</option>
+			<option>
+				Boobs Frame
+			</option>
+			<option>
+				Dildo Frame
+			</option>
+			<option>
+				Nongrami Frame
+			</option>
+			<option>
+				Pussy Frame
+			</option>
+			<option>
+				Johnny Frame
+			</option>
+			<option>
+				Lady Frame
+			</option>
+			<option>
+				None
+			</option>
+		</select></p>
+<!--Reset Everything on Button Press-->
+		<p><button class="resetButton" id="resetBtn" onclick="resetButton()">Reset</button></p>
+<!--Make Nanu Nude on button press-->
+		<p><button class="nudeButton" id="nudeBtn" onclick="nudeButton()">Nude</button></p>
+<!--End of the options menu-->
+		<p class="divisionEnds"></p>
+<!--Click this button to share this webapp-->
+		<p><button class="shareButton" id="shareBtn" onclick="copyLink()">Share Me</button></p>
+<!--Go to gallery button lies below-->
+		<p class="lastEnd"><img src="gallery.png" class="galleryPageButton" id="galleryPageBtn" onclick="galleryView()"></img>
+		<label class="galleryLabel">Gallery</label>	
+		</p>
+	</div>
+<!--Main Canvas where NANU lies-->
+	<div class="main">
+<!--Nanu lip movement-->
+		<img src="NANUmouthOpen.gif" class="nanuTalk" id="nanuTlk">		
+<!--Nanu Upper Body-->
+		<img src="RUPAGENJInanuHeadNormal.gif" class="headOfNanu" id="nanuHeadNormal">
+<!--Nanu Chat Area Show-->
+		<a class="chatAreaShow" id="chatAshow">NANU:-</a> 
+<!--Copied to clipboard notification-->		
+		<a class="notificationShow" id="notificationShw">Sharable Link Copied !</a>
+<!--Spectacles viewer-->
+		<img src="" class="glassesContainer" id="glassesView">
+<!--Nanu Lower Body-->
+		<img src="PANTjangiya.gif" class="tailOfNanu" id="nanuTailNormal" onclick="">
+<!--Click this button to show menu bar-->
+		<button class="showMenuButton" id="showMenuBtn" onclick="showMenu()">Show Menu</button>
+<!--Copy Link textbox-->
+		<input type="text" class="copyLinkTextBox" id="copyLinkTxtBox" value="http://www.mr-nanu.gq/">
+	</div>
+<!--Chat with Nanu Message-box lies here-->
+	<div class="footer" id="footerMenu">
+<!--Go to Help Page button-->		
+		<label class="helpButton" onclick="helpFunction()">Help</label>
+<!--User Input Textbox-->
+		<p><input type="text" class="messageBox" id="textMessageBox" placeholder="Enter Message">
+<!--User Answer Submit Button-->
+		<button class="sendButton" onclick="textArea()" id="sendBtn">Chat</button>&nbsp&nbsp
+<!--Click this button to hide menu bar-->
+		<a class="hideMenuButton" id="hideMenuBtn" onclick="hideMenu()">Full Screen</a></p>
+	</div>
+<!--Adding JavaScript file-->
+<script src="gameActions.js"></script>
+<script src="gameChat.js"></script>
+</body>
+</html>

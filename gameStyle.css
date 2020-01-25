@@ -42,7 +42,7 @@ body{
 	padding-bottom: 5%;
 	width: 90%;
 }
-.singButton{
+.resetButton{
 	color: white;
 	background-color: rgb(100,100,0);
 	padding-top: 5%;
@@ -88,7 +88,7 @@ body{
 }
 .glassesContainer{
 	display: none;
-	z-index: 2;
+	z-index: 3;
 	left: 20.5%;
 	position: fixed;
 	top: 8.5%;
@@ -98,7 +98,7 @@ body{
 }
 .nanuTalk{
 	display: none;
-	z-index: 3;
+	z-index: 2;
 	position: fixed;
 	width: 80%;
 	height: 79%;
@@ -178,6 +178,18 @@ body{
 	height: auto;
 	right: 0;
 	left: 0;
+}
+.helpButton{
+	position: fixed;
+	left: 2%;
+	bottom: 1%;
+	color: red;
+	border-radius: 20%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-right: 1%;
+	padding-left: 1%;
+	background-color: rgba(0,0,0,0.1);
 }
 .messageBox{
 	width: 80%;
