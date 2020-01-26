@@ -14,12 +14,30 @@ body{
 	height: 10%;
 	background-color: rgba(50,50,50,0.3);
 }
-.mainLogo{
+.backButton{
+	z-index: 3;
+	border-color: rgb(46,157,6);
+	background-color: rgb(46,157,6);
+	color: white;
+	font-weight: bold;
+	left: 0%;
+	width: auto;
+	height: 5%;
+	position: fixed;
+	font-size: 100%;
+}
+.resetButton{
+	display: none;
+	z-index: 3;
+	border-color: rgb(232,158,19);
+	background-color: rgb(232,158,19);
 	color: white;
 	font-weight: bold;
 	padding-top: 0%;
+	width: 50%;
+	height: 10%;
 	position: fixed;
-	font-size: 15pt;
+	font-size: 150%;
 }
 .mainBody{
 	overflow-x: hidden;
@@ -34,4 +52,65 @@ body{
 	width: 100%;
 	font-size: 20pt;
 	background-color: darkred;
+}
+.leftButton{
+	display: none;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	background-color: rgba(0,0,0,0.1);
+	position: fixed;
+	width: 10%;
+	left: 0%;
+	height: 30%;
+	top: 30%;
+}
+.button2{
+	font-weight: bold;
+	font-size: 150%;
+	border-color: rgba(0,0,0,0.1);
+	color: red;
+	position: fixed;
+	width: inherit;
+	height: inherit;
+	background-color: rgba(0,0,0,0.1);
+}
+.mainFrame{
+	border-radius: 4%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	position: fixed;
+	height: 70%;
+	left: 5%;
+	width: 90%;
+}
+.imageMain{
+	display: block;
+	position: fixed;
+	width: 80%;
+	height: 65%;
+}
+.rightButton{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	background-color: rgba(0,0,0,0.1);
+	position: fixed;
+	width: 10%;
+	right: 0%;
+	height: 30%;
+	top: 30%;
+}
+.button1{
+	font-weight: bold;
+	font-size: 150%;
+	border-color: rgba(0,0,0,0.1);
+	color: red;
+	position: fixed;
+	width: inherit;
+	height: inherit;
+	background-color: rgba(0,0,0,0.1);
 }

@@ -11,11 +11,26 @@
      name='viewport' 
      content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0' 
 />
-<div class="footer">
-	<p class="mainLogo">Download</p>
 </div>
 <p class="galleryText">Gallery</p>
 </body>
+<!--main-->
+<div class="mainFrame">
+	<img class="imageMain" id="mainImage" src="0.jpg">
+</div>
+<div class="rightButton" id="rightBtn">
+	<button class="button1" id="btn1" onclick="plusFunction()">></button>
+</div>
+<div class="leftButton" id="leftBtn">
+	<button class="button2" id="btn2" onclick="minusFunction()"><</button>
+</div>
 
-None of the elements are working now.
+<!--Footer-->
+<div class="footer">
+	<button class="backButton" id="backBtn" onclick="backFunction()">
+		back
+	</button>
+	<button class="resetButton" id="resetBtn" onclick="resetFunction()">Reset</button>
+</div>
+<script src="galleryActions.js"></script>
 </html>
